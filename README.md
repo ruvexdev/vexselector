@@ -191,4 +191,4 @@ Issues and pull requests are welcome. For larger changes, please open an issue f
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE)
