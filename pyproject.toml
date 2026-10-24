@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vexselector"
+dynamic = ["version"]
+description = "Listas de selección para terminal con teclado y ratón"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "ruvexdev", email = "rubenmg913@gmail.com" }]
+keywords = ["terminal", "menu", "selector", "curses", "tui", "mouse"]
+dependencies = [
+    'windows-curses; sys_platform == "win32"',
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console :: Curses",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+[project.urls]
+Homepage = "https://github.com/ruvexdev/vexselector"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vexselector = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "vexselector.__version__" }
